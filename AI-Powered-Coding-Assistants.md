@@ -78,11 +78,11 @@ However, the risk tier escalates to High if state staff give coding assistants a
 * 🟢 **Approved (Government Versions):**
     **Windsurf (Codeium):** Preferred choice. The **Windsurf Government Cloud** is FedRAMP High-authorized.
     **​GitHub Copilot:** Allowed via Enterprise. Requires mandatory opt-out of data training and use of public code filters.
-    **Google AI Studio:** Accessible via the State’s Google contract; requires access to an enterprise API key through the Maryland Department of Information Technology (DoIT)’s [intake process](https://doitmaryland.service-now.com/doit?id=doit).
+    **Google AI Studio:** Access is controled via DoIT's Google Workspace team. A paid API key is required to ensure it does not train on data.
+    **Jules:** Note: if do not want it to train on content you must use a private GitHub repo [Jules legal](https://jules.google.com/legal).
 
 * 🟡 **Experimental / Pilot Only:**
     * **Cursor:** Not FedRAMP-authorized. Use only in sandboxes with CIO approval and **Privacy Mode** (Zero Data Retention) enabled.
-    * **Jules:** Allowed for experimental use in sandboxes only; requires a detailed security plan and CIO approval.
 
 * 🔴 **Restricted / Not Recommended:**
     * **Cline:** High autonomous risk and lack of managed accountability; not for production use.

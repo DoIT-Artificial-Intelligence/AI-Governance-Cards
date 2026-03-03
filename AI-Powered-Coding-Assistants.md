@@ -44,7 +44,7 @@ However, the risk tier escalates to High if state staff give coding assistants a
 
 ### Phase 1: Setup and Configuration​​​
 
-* **Approved Versions:** Use only **Enterprise or Government** versions of coding assistants; individual or free versions often default to data training and are prohibited.
+* **Approved Versions:** Use only versions of coding assistants that **do not** train on code, data, or other artifacts, such as **Enterprise or Government** solutions; individual or free versions that require permitting training and are prohibited.
 * **Privacy Hardening:** You **must uncheck** _"Allow vendor to use code for training"_ and enable filters that block suggestions matching public code.
 * **Limit Access:** Write permissions files (e.g., .gitignore, .copilotignore) to explicitly block the AI from reading sensitive directory segments or environment files containing secrets.
 

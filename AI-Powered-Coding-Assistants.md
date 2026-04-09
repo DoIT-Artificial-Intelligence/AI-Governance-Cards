@@ -1,8 +1,8 @@
-# AI Governance Card: AI-Powered Coding Assistance Tools
+# AI Governance Card: AI-Powered Coding Assistants
 
-* Last Revised: `01/22/26`
+* Last Revised: `04/08/26`
 * Date Issued: `01/27/2026`
-* Version: `2.0`
+* Version: `3.0`
 * Author: Solomon Abiola, Lauren Maffeo
 
 ## 1.0 Purpose and Scope
@@ -44,6 +44,7 @@ However, the risk tier escalates to High if state staff give coding assistants a
 
 ### Phase 1: Setup and Configuration​​​
 
+* **Confirm Data:** Level 3 (Confidential) and Level 4 (Restricted) data is not allowed for use in state-provided AI coding assistants. 
 * **Approved Versions:** Use only versions of coding assistants that **do not** train on code, data, or other artifacts, such as **Enterprise or Government** solutions; individual or free versions that require permitting training and are prohibited.
 * **Privacy Hardening:** You **must uncheck** _"Allow vendor to use code for training"_ and enable filters that block suggestions matching public code.
 * **Limit Access:** Write permissions files (e.g., .gitignore, .copilotignore) to explicitly block the AI from reading sensitive directory segments or environment files containing secrets.
@@ -53,12 +54,15 @@ However, the risk tier escalates to High if state staff give coding assistants a
 * **Zero Sensitive Data:** Never input PII, PHI, or authentication secrets (API keys, passwords). If code must be generated for a sensitive field, use an abstract placeholder (e.g., USER_SSN).
 * **Human-in-the-Loop:** Treat AI as a junior developer: Helpful but potentially flawed. Review every suggestion for correctness, security vulnerabilities (like SQL injection or weak cryptography), and adherence to team style standards.
 * **Sanitize Environments:** Use only synthetic data for development and testing.
+* **Keep Code Transparent:** Add code comments like // Generated with AI assistance - Tool [date]. Maryland state staff must be able to explain how their code works, regardless of whether they or an AI coding assistant wrote it. Adding code comments confirms your source and provides key metadata. 
+* **Assess Impact:** Users must complete an algorithmic impact assessment to confirm no disparate impact on protected groups.
 
 ### Phase 3: Final Checks and Commits​​​
 
 * **Validation:** All significant AI-generated code must undergo peer review and rigorous unit/integration testing.
-* **Automated Scans:** Run static analysis (linters), secret scanning, and code quality checks before merging.
+* **Automated Scans:** Run static analysis (linters), SAST, secret scanning, and code quality checks before merging. AI can produce syntactically correct code that passes standard quality checks while harboring subtle logic or runtime vulnerabilities. Mandating this series of scans before deployment, and continuously after, helps mitigate that risk. 
 * **Accountability:** Before committing, **you must fully understand the code and be able to explain how it works:** _"AI did it"_ is not an acceptable excuse for bugs or security incidents.
+* **Accessibility:** Confirm that AI-generated code [meets WCAG 2.1 AA standards](https://www.w3.org/TR/WCAG21/) and doesn't introduce usability barriers.
 
 ## 5.0 Risk Analysis and Mitigation
 
@@ -72,13 +76,23 @@ However, the risk tier escalates to High if state staff give coding assistants a
     * **Mitigation:** Perform dynamic analysis and penetration testing on all output that coding assistants produce.
 * **Automation Bias:** Developers may blindly trust AI suggestions due to their sophisticated appearance.
     * **Mitigation:** Maintain healthy skepticism and annotate which code sections were AI-suggested during reviews.
+* **Algorithmic Bias:** AI risks embedding discriminatory patterns from training data.
+    * **Mitigation:** Conduct an algorithmic impact assessment to confirm your code has no disparate impact on protected groups.
+* **Transparency Gaps:** No record of AI-generated vs. human code.
+  * **Mitigation:** Use inline documentation and log AI tool usage in commit messages.
+* **Data Overexposure:** Shares more codebase context with the coding assistant than necessary.
+  * **Mitigation:** Use workspace-level ignore files and review tool permissions quarterly.
+
 
 ## 6.0 Coding Assistant Tool Status
 
 * 🟢 **Approved (Government Versions):**
-    **​GitHub Copilot:** Allowed via Enterprise. Requires mandatory opt-out of data training and use of public code filters.
-    **Google AI Studio:** Access is controled via DoIT's Google Workspace team. A paid API key is required to ensure it does not train on data.
-    **Jules:** Note: if do not want it to train on content you must use a private GitHub repo see [Jules legal](https://jules.google.com/legal).
+    **Claude Code:** Allowed via DoIT using AWS Bedrock. 
+    **​GitHub Copilot:** Allowed via its Enterprise eversion. Requires mandatory opt-out of data training and use of public code filters.
+    **Google AI Studio:** Allowed via paid API keys to ensure it does not train on data. 
+    **Jules:** Note that if you do not want it to train on content, you must use a private GitHub repo see [Jules legal](https://jules.google.com/legal).
+
+  To request licenses for the tools above, [email (doit.intake@maryland.gov)] and cc your agency's portfolio officer.
 
 * 🟡 **Experimental / Pilot Only:**
     * **Cursor:** Not FedRAMP-authorized. Use only in sandboxes with CIO approval and **Privacy Mode** (Zero Data Retention) enabled.
@@ -96,10 +110,10 @@ Maryland’s AI subject matter experts may reach out during intake to share pre-
 
 ## 8.0 Analogy for Understanding
 
-Using an AI coding assistant is like using an advanced cruise control system. While the system can handle the monotony of the highway (boilerplate code), the driver (the developer) must keep their hands on the wheel and eyes on the road.
+Using an AI coding assistant is like using an advanced cruise control system. While the system can handle the monotony of the highway (boilerplate code), the driver (the developer) must keep their hands on the wheel and eyes on the road. Their goal is twofold: Arrive at the right destination, and so while keeping everyone else on the road safe from harm.
 
-If the system suggests a dangerous lane change (a security vulnerability) or ignores a Private Property sign (copyright infringement), the driver is the one legally and practically responsible for the outcome.
+If the system suggests a dangerous lane change (a security vulnerability) or ignores a Private Property sign (copyright infringement), the driver is the one legally and practically responsible for the outcome. To avoid this, they must follow the right signs (transparent documentation), use only necessary roads (data minimization), and prioritize passenger safety (human-centered design) over their speed of arrival.
 
 ​The State of Maryland applies this same lens to coding assistants. We pledge to always use AI in service to State residents, employees, and organizations. That involves using AI like coding assistants to deliver state services more effectively. Keeping Maryland’s civil servants in the driver’s seat empowers the State to innovate responsibly.
 
-**​Additional Support:** For additional support, explore Maryland’s AI resources and tools at the state’s official​ [​AI portal](https://ai.maryland.gov/).
+**​Additional Support:** For additional support, explore Maryland’s AI resources and tools at the state’s official​ [​AI website](https://ai.maryland.gov/).

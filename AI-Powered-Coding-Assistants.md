@@ -87,12 +87,12 @@ However, the risk tier escalates to High if state staff give coding assistants a
 ## 6.0 Coding Assistant Tool Status
 
 * 🟢 **Approved (Government Versions):**
-    **Claude Code:** Allowed via DoIT using AWS Bedrock. 
-    **​GitHub Copilot:** Allowed via its Enterprise eversion. Requires mandatory opt-out of data training and use of public code filters.
-    **Google AI Studio:** Allowed via paid API keys to ensure it does not train on data. 
-    **Jules:** Note that if you do not want it to train on content, you must use a private GitHub repo see [Jules legal](https://jules.google.com/legal).
+    * **Claude Code:** Allowed via Maryland's Department of Information Technology (DoIT) using AWS Bedrock. 
+    * **​GitHub Copilot:** Allowed via its Enterprise eversion. Requires mandatory opt-out of data training and use of public code filters.
+    * **Google AI Studio:** Allowed via paid API keys to ensure it does not train on data. 
+    * **Jules:** Note that if you do not want it to train on content, you must use a private GitHub repo see [Jules legal](https://jules.google.com/legal).
 
-  To request licenses for the tools above, [email (doit.intake@maryland.gov)] and cc your agency's portfolio officer.
+  To request licenses for the tools above, email (doit.intake@maryland.gov) and cc your agency's portfolio officer.
 
 * 🟡 **Experimental / Pilot Only:**
     * **Cursor:** Not FedRAMP-authorized. Use only in sandboxes with CIO approval and **Privacy Mode** (Zero Data Retention) enabled.

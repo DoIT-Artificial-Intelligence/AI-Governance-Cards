@@ -90,7 +90,7 @@ However, the risk tier escalates to High if state staff give coding assistants a
     * **Claude Code:** Allowed via Maryland's Department of Information Technology (DoIT) using AWS Bedrock. 
     * **​GitHub Copilot:** Allowed via its Enterprise eversion. Requires mandatory opt-out of data training and use of public code filters.
     * **Google AI Studio:** Allowed via paid API keys to ensure it does not train on data. 
-    * **Jules:** Allowed if you must use a private GitHub repository to prevent data training. [Jules' Privacy Notice](https://jules.google.com/legal) has more details.
+    * **Jules:** Allowed if you use a private GitHub repository to prevent data training. [Jules' Privacy Notice](https://jules.google.com/legal) has more details.
 
   To request licenses for the tools above, email doit.intake@maryland.gov and cc your agency's portfolio officer.
 

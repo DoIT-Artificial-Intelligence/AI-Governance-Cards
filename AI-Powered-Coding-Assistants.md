@@ -30,7 +30,7 @@
 
 ​Developers remain 100% responsible for the final versions of any outputs that AI coding assistants produce. The State correlates risk with the level of autonomy per type of coding assistant:
 
-​​![Coding Assistant Autonomy Levels]()
+​​![Coding Assistant Autonomy Levels](images/AI%20Coding%20Assistant%20Governance%20Card%20-%20Coding%20Assistant%20Autonomy%20Levels.png)
 *This governance card's author created this image using Claude.ai, specifying in their prompt that this image must comply with the Maryland Web Design System (MWDS).​*​
 
 ### Low Autonomy (Code Completion): ​​

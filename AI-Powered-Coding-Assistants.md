@@ -85,7 +85,7 @@ The tool generates large code blocks based on prompts (e.g., Google AI Studio). 
 * **Automation Bias:** Developers may blindly trust AI suggestions due to their sophisticated appearance.
     * **Mitigation:** Maintain healthy skepticism and annotate which code sections were AI-suggested during reviews.
 * **Algorithmic Bias:** AI risks embedding discriminatory patterns from training data.
-​    * **Mitigation:​** Conduct an algorithmic impact assessment to confirm your code ​​has no disparate impact on protected groups.​
+    * **Mitigation:​** Conduct an algorithmic impact assessment to confirm your code ​​has no disparate impact on protected groups.​
 * **Transparency Gaps:** No record of AI-generated vs. human code.
     * **Mitigation:** Use inline documentation and log AI tool usage in commit messages.
 * **Data Overexposure:** Shares more codebase context with the coding assistant than necessary.
@@ -94,17 +94,17 @@ The tool generates large code blocks based on prompts (e.g., Google AI Studio). 
 ## 6.0 Coding Assistant Tool Status
 
 * 🟢 **Approved (Government Versions):**
- * **Claude Code:** Allowed via Maryland's Department of Information Technology (DoIT) using AWS Bedrock. 
+    * **Claude Code:** Allowed via Maryland's Department of Information Technology (DoIT) using AWS Bedrock. 
     * **​GitHub Copilot:** Allowed via its Enterprise eversion. Requires mandatory opt-out of data training and use of public code filters.
     * **Google AI Studio:** Allowed via paid API keys to ensure it does not train on data. 
     * **Jules:** Allowed if you use a private GitHub repository to prevent data training. [Jules' Privacy Notice](https://jules.google.com/legal) has more details.
 
 To request licenses for the tools above, email doit.intake@maryland.gov and cc your agency's portfolio officer.
 ​​
-* 🟡 **Experimental / Pilot Only:**
+* 🟡 **Experimental/Pilot Only:**
     * **Cursor:** Not FedRAMP-authorized. Use only in sandboxes with CIO approval and **Privacy Mode** (Zero Data Retention) enabled.
 
-* 🔴 **Restricted / Not Recommended:**
+* 🔴 **Restricted/Not Recommended:**
     * **Cline:** High autonomous risk and lack of managed accountability; not for production use.
     * **Free/Individual Versions:** Prohibited for state business due to data training defaults.
 

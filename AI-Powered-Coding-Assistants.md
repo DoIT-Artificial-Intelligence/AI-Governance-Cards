@@ -49,7 +49,7 @@ The tool generates large code blocks based on prompts (e.g., Google AI Studio). 
 
 ## 4.0 Developer Roadmap (​Mandatory Do’​s and Don’ts)​​ ​
 
-![AI Coding Assistant Roadmap]​​
+![AI Coding Assistant Roadmap]​​(images/ai-coding-assistant-roadmap-mdwds.png)
 *This governance card's author created this image using Claude.ai, specifying in their prompt that this image must comply with the Maryland Web Design System (MWDS).*
 
 ### Phase 1: Setup and Configuration​​​
